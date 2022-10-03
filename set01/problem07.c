@@ -1,14 +1,31 @@
 #include <stdio.h>
-int main() {
-    int n, i, sum = 0;
+int input_n()
+{
+	int n;
+printf("Enter n\n");
+	scanf("%d",&n);
+	return n;
+}
 
-    printf("Enter a positive integer: ");
-    scanf("%d", &n);
+int sum_n_nos(int n)
+{
+	int sum = 0;
+	for( int i=1; i<=n; i++) 
+		sum =sum+i;
+	return sum;
+}
 
-    for (i = 1; i <= n; i++) {
-        sum += i;
-    }
+void output(int n, int sum)
+{
+	for( int i=1; i<n; i++) 
+		printf("%d + ",i);
+	printf("%d = %d",n,sum);
+}
 
-    printf("Sum = %d", sum);
-    return 0;
+int main()
+{
+	int n = input_n();
+	int sum = sum_n_nos(n);
+	output(n,sum);
+	return 0;
 }
