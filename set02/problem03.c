@@ -33,7 +33,7 @@ void find_weight(Camel *c)
 }
 void output(Camel c)
 { 
-  printf("The weight of camel is %f\n",c.weight);
+  printf("The weight of camel is %.2f\n",c.weight);
 }
 int main()
   {
